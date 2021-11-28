@@ -48,6 +48,11 @@ namespace Server
                 {
                     await context.Response.WriteAsync("-- Demo.AspNetCore.StreamJsonRpc.Server.WebSocket --");
                 });
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
